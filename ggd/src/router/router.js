@@ -13,6 +13,8 @@ const routes = [
     { path: '/join', component: Join },
     { path: '/about', component: About },
     { path: '/projects', component: Projects },
+    { path: '/projects/erasmus', component: Projects }, // Erasmus için örnek
+    { path: '/projects/horizon', component: Projects }, // Horizon 2020 için örnek
 
 
     // { path: '/content/:id', name: 'ContentPage', component: ReferenceInPage, props: true }
