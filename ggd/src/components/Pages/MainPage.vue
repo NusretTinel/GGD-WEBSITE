@@ -4,7 +4,7 @@
     <Header></Header>
     <Focus></Focus>
     <Today></Today>
-
+<Last></Last>
 
 
     <Footer></Footer>
@@ -18,9 +18,10 @@ import Header from "@/components/PageContent/MainPage/MainPageHeader.vue";
 import Footer from "@/components/Utilities/Footer/Footer.vue";
 import Focus from "@/components/PageContent/MainPage/Focus.vue"
 import Today from "@/components/PageContent/MainPage/Today.vue";
+import Last from "@/components/PageContent/MainPage/Last.vue";
 
 export default defineComponent({
-  components: { Navbar, Header,Focus, Footer,Today },
+  components: {Last, Navbar, Header,Focus, Footer,Today },
   name: 'MainPage',
 });
 </script>
