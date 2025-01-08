@@ -3,6 +3,9 @@
     <Navbar class="navbar_container"></Navbar>
     <Header></Header>
     <Focus></Focus>
+    <Today></Today>
+
+
 
     <Footer></Footer>
   </div>
@@ -14,9 +17,10 @@ import Navbar from "@/components/Utilities/Navbar/navbar.vue";
 import Header from "@/components/PageContent/MainPage/MainPageHeader.vue";
 import Footer from "@/components/Utilities/Footer/Footer.vue";
 import Focus from "@/components/PageContent/MainPage/Focus.vue"
+import Today from "@/components/PageContent/MainPage/Today.vue";
 
 export default defineComponent({
-  components: { Navbar, Header,Focus, Footer },
+  components: { Navbar, Header,Focus, Footer,Today },
   name: 'MainPage',
 });
 </script>
