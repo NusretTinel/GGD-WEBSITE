@@ -1,5 +1,6 @@
 <template>
   <div class="homepage">
+    <canvas id="particle-canvas"></canvas>
     <div class="hero-section">
       <div class="text-content">
         <h1>Genç Girişimci Derneği</h1>
@@ -25,17 +26,91 @@
 <script>
 export default {
   name: "HomePage",
+  mounted() {
+    const canvas = document.getElementById("particle-canvas");
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    // İlk başta canvas'ı tam ekran ayarla
+    resizeCanvas();
+
+    // Partikül oluşturma
+    const particles = [];
+    const numParticles = 39; // Daha az partikül
+
+    // Rastgele bir renk oluştur
+    function getRandomColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgba(${r}, ${g}, ${b}, 0.7)`; // Opaklık 0.7
+    }
+
+    for (let i = 0; i < numParticles; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
+        speedX: (Math.random() * 0.5) - 0.35, // Daha yavaş hız
+        speedY: (Math.random() * 0.5) - 0.35, // Daha yavaş hız
+        color: getRandomColor(), // Her partiküle rastgele bir renk ata
+      });
+    }
+
+    // Partikül animasyonu
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((particle) => {
+        particle.x += particle.speedX;
+        particle.y += particle.speedY;
+
+        // Kenarlardan sekme
+        if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
+
+        // Çizim
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color; // Rastgele renk kullan
+        ctx.fill();
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Pencere boyutları değiştiğinde canvas'ı yeniden boyutlandır
+    window.addEventListener("resize", resizeCanvas);
+  },
 };
 </script>
 
+
+
+
 <style scoped>
+#particle-canvas {
+  position: fixed; /* Canvas her zaman ekrana sabitlenir */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Tam ekran genişlik */
+  height: 100vh; /* Tam ekran yükseklik */
+  z-index: -1; /* İçeriğin arkasında yer alır */
+  pointer-events: none; /* Etkileşim alınmaz */
+}
 /* Genel Sayfa Ayarları */
 .homepage {
   text-align: center;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: transparent;
 }
 
 /* Hero Bölümü */

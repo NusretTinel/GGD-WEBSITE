@@ -67,8 +67,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 80px;
 }
 
