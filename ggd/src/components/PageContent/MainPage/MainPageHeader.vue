@@ -111,6 +111,7 @@ export default {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  margin-bottom: 60px;
 }
 
 /* Hero Bölümü */
