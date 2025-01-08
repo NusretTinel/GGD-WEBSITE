@@ -89,17 +89,17 @@ export default {
 
 .secondary-button {
   padding: 0.8rem 1.5rem;
-  border: 2px solid #007bff;
+  border: 2px solid #014da3;
   border-radius: 20px;
   background: transparent;
-  color: #007bff;
+  color: #014da3;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .secondary-button:hover {
-  background: #007bff;
+  background: #014da3;
   color: white;
 }
 
