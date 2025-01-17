@@ -15,23 +15,23 @@
           <li><router-link to="/projects/esc">ESC</router-link></li>
           <li class="dropdown-submenu">
             <router-link to="/projects/ka1" class="submenu-toggle">KA1</router-link>
-            <ul class="submenu">
-              <!-- Yıllar -->
-              <li class="dropdown-submenu">
-                <router-link to="/projects/ka1/2022" class="submenu-toggle">2022</router-link>
-                <ul class="submenu">
-                  <li><router-link to="/projects/ka1/2022/june">June</router-link></li>
-                  <li><router-link to="/projects/ka1/2022/july">July</router-link></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <router-link to="/projects/ka1/2023" class="submenu-toggle">2023</router-link>
-                <ul class="submenu">
-                  <li><router-link to="/projects/ka1/2023/january">January</router-link></li>
-                  <li><router-link to="/projects/ka1/2023/february">February</router-link></li>
-                </ul>
-              </li>
-            </ul>
+<!--            <ul class="submenu">-->
+<!--              &lt;!&ndash; Yıllar &ndash;&gt;-->
+<!--              <li class="dropdown-submenu">-->
+<!--                <router-link to="/projects/ka1/2022" class="submenu-toggle">2022</router-link>-->
+<!--                <ul class="submenu">-->
+<!--                  <li><router-link to="/projects/ka1/2022/june">June</router-link></li>-->
+<!--                  <li><router-link to="/projects/ka1/2022/july">July</router-link></li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--              <li class="dropdown-submenu">-->
+<!--                <router-link to="/projects/ka1/2023" class="submenu-toggle">2023</router-link>-->
+<!--                <ul class="submenu">-->
+<!--                  <li><router-link to="/projects/ka1/2023/january">January</router-link></li>-->
+<!--                  <li><router-link to="/projects/ka1/2023/february">February</router-link></li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--            </ul>-->
           </li>
         </ul>
       </li>
@@ -111,7 +111,7 @@ export default {
   position: absolute;
   top: 100%;
   left: 0;
-  background: linear-gradient(120deg, #ffeecf, #ffadad, #ffd6a5);
+  background: linear-gradient(120deg, #FF9F1CFF, #ff1654, #FF9F1CFF);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   z-index: 10;
@@ -129,7 +129,7 @@ export default {
 
 .dropdown-menu li a {
   text-decoration: none;
-  color: #3a3a3a;
+  color: #ffffff;
   font-size: 14px;
   display: block;
   padding: 0.5rem 1rem;
