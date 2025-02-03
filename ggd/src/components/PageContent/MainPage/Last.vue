@@ -28,25 +28,25 @@ export default {
           id: 1,
           title: "Çözüm Sosyal Girişimcilik",
           date: "2022",
-          backgroundImage: require("@/assets/projectImages/Untitled-2_0001_IMG-20231126-WA0180.webp"), // Resim yolu
+          backgroundImage: require("../../../../public/Untitled-2_0001_IMG-20231126-WA0180.webp"), // Resim yolu
         },
         {
           id: 2,
           title: "Sportif Gençlik Yönlendirme ve Gençlik Çalışmaları",
           date: "15 Aralık 2023",
-          backgroundImage: require("@/assets/projectImages/Untitled-2_0004_IMG_6916.webp"), // Resim yolu
+          backgroundImage: require("../../../../public/Untitled-2_0004_IMG_6916.webp"), // Resim yolu
         },
         {
           id: 3,
           title: "Simülasyon ile Gençlik Çalışmaları",
           date: "30 Kasım 2023",
-          backgroundImage: require("@/assets/projectImages/Untitled-2_0002_IMG_8992.webp"), // Resim yolu
+          backgroundImage: require("../../../../public/Untitled-2_0002_IMG_8992.webp"), // Resim yolu
         },
         {
           id: 4,
           title: "Gençlerin Sesi Gençlerin Geleceği",
           date: "10 Ekim 2023",
-          backgroundImage: require("@/assets/projectImages/Untitled-2_0006_IMG_0491.webp"), // Resim yolu
+          backgroundImage: require("../../../../public/Untitled-2_0006_IMG_0491.webp"), // Resim yolu
         },
       ],
     };
